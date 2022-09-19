@@ -1,4 +1,4 @@
-import 'package:arowdi_app/back_end/maino.dart';
+import 'package:arowdi_app/back_end/main_search.dart';
 import 'package:arowdi_app/comp/color.dart';
 import 'package:arowdi_app/comp/text.dart';
 import 'package:flutter/material.dart';

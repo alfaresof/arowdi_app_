@@ -3,7 +3,7 @@
 import 'package:arowdi_app/comp/color.dart';
 import 'package:flutter/material.dart';
 import 'package:arowdi_app/comp/input_deco.dart';
-import '../../back_end/maino.dart';
+import '../../back_end/main_search.dart';
 import '../../back_end/convert.dart';
 import '../../comp/text.dart';
 import '../result.dart';
