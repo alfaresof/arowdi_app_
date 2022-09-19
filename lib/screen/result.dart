@@ -3,7 +3,7 @@ import 'package:arowdi_app/comp/color.dart';
 import 'package:arowdi_app/comp/text.dart';
 import 'package:flutter/material.dart';
 
-import '../back_end/search.dart';
+import '../back_end/convert.dart';
 import '../comp/error_massge.dart';
 import '../sql/sql.dart';
 import 'home.dart';
@@ -24,8 +24,8 @@ class result extends StatelessWidget {
       saved_delete_button = "حذف";
     }
     List<List> results;
-    String A_A=search().searchn(first, false),A_f=search().searchn(first, true);
-    String B_a=search().searchn(second, false),B_f=search().searchn(second, true);
+    String A_A=search().converter_method(first, false),A_f=search().converter_method(first, true);
+    String B_a=search().converter_method(second, false),B_f=search().converter_method(second, true);
     results = maino().mainos(first, second);
     return Scaffold(
       backgroundColor: black_color,

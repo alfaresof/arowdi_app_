@@ -1,15 +1,15 @@
 
 
-import 'package:arowdi_app/back_end/search.dart';
+import 'package:arowdi_app/back_end/convert.dart';
 import 'package:arowdi_app/back_end/bahrs/all_bahrs.dart';
-import 'package:arowdi_app/back_end/taffeelat/MaTaffelat.dart';
+import 'package:arowdi_app/back_end/taffeelat/Taffelat_search.dart';
 class maino{
 
 
      List<List> mainos(String A, String B){
        print("object");
-    String first = search().searchn(A,false);
-    String second = search().searchn(B,false);
+    String first = search().converter_method(A,false);
+    String second = search().converter_method(B,false);
     List<String> res = [first,second];
     print(first);
     print(second);

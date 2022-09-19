@@ -4,7 +4,7 @@ import 'package:arowdi_app/comp/color.dart';
 import 'package:flutter/material.dart';
 import 'package:arowdi_app/comp/input_deco.dart';
 import '../../back_end/maino.dart';
-import '../../back_end/search.dart';
+import '../../back_end/convert.dart';
 import '../../comp/text.dart';
 import '../result.dart';
 import 'package:arowdi_app/comp/error_massge.dart';
@@ -58,8 +58,8 @@ alignment: Alignment.center,
                     onChanged: (val){
                       setState(() {
                         first_shatr = val;
-                        first_arrowdi = search().searchn(val,false);
-                        first = search().searchn(val, true);
+                        first_arrowdi = search().converter_method(val,false);
+                        first = search().converter_method(val, true);
 
                       } );
                     },
@@ -80,8 +80,8 @@ alignment: Alignment.center,
                     onChanged: (val){
                       setState(() {
                         second_shatr = val;
-                        second_arrowdi = search().searchn(val,false);
-                        second = search().searchn(val, true);
+                        second_arrowdi = search().converter_method(val,false);
+                        second = search().converter_method(val, true);
 
                       } );
                     },

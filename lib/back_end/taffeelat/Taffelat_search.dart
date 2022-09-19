@@ -1,4 +1,4 @@
-class MaTaffelt{
+class Taffelat_search{
 
   List<List<String>> Taffelat = [
     ["1011010", "111010", "10110", "1110", "101100", "11100", "10110100", "1110100", "1010", "101010"],//faaelaton 0
@@ -22,16 +22,16 @@ class MaTaffelt{
     ["متفاعلن", "متْفاعلُ", "متفاعلْ", "متْفاعلنْ", "متفا", "متْفا", "متفاعلاتن", "متْفاعلاتن", "متفاعلان", "متْفاعلان"]//motafaelon 7
   ];
   List<int> results = [0,0,0,0];
-  List<int> find (List<bool> bol,String a, int start,int Taffelah){
-    if(0 <= start){
-      for (int i = 0; i < Taffelat[Taffelah].length; i++) {
-        if (bol[i] == true) {
-          if(start+Taffelat[Taffelah][i].length <= a.length){
-            if (Taffelat[Taffelah][i] == a.substring(start, start + Taffelat[Taffelah][i].length)) {
-              results[0] = Taffelat[Taffelah][i].length;
-              results[1] = Taffelah;
+  List<int> find (List<bool> bol,String shatr, int start,int which_taffelah){
+    if(0 <= start){//to start search
+      for (int i = 0; i < Taffelat[which_taffelah].length; i++) {//loop search
+        if (bol[i] == true) {// premmesion to use taffelah
+          if(start+Taffelat[which_taffelah][i].length <= shatr.length){//cheack if we can make sub string or shart was end
+            if (Taffelat[which_taffelah][i] == shatr.substring(start, start + Taffelat[which_taffelah][i].length)) {// check for تطابق
+              //result of search
+              results[0] = Taffelat[which_taffelah][i].length;
+              results[1] = which_taffelah;
               results[2] = i;
-              print(results);
               return results;
             }}
         }
