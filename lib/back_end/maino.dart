@@ -3,10 +3,10 @@
 import 'package:arowdi_app/back_end/convert.dart';
 import 'package:arowdi_app/back_end/bahrs/all_bahrs.dart';
 import 'package:arowdi_app/back_end/taffeelat/Taffelat_search.dart';
-class maino{
+class main_search_class{
 
 
-     List<List> mainos(String A, String B){
+     List<List> main_search(String A, String B){
        print("object");
     String first = search().converter_method(A,false);
     String second = search().converter_method(B,false);
@@ -77,45 +77,46 @@ class maino{
     print(f);
 
     for (int i =0 ; i<f.length; i++){
-      if(f[i][0] != -1){
-        print(bahrso[i]);
-        print(f[i]);
-        print(f[i][0][0][3]);
-        print('before it');
-        f[i][0][0][3] = i;
+      if(f[i][0] != -1){//check if bahr result is not -1
+        // print(bahrso[i]);
+        // print(f[i]);
+        // print(f[i][0][0][3]);
+        // print('before it');
+        f[i][0][0][3] = i;// to but number of bahr in taffelah to use it later
         f[i][0][1][3] = i;
-        print(f[i][1][0][3]);
-        print(bahrso[f[i][0][0][3]]);
-        print(WTaffelat[f[i][0][1][1]][f[i][0][1][2]]);
-        print('after it');
-        print(f[i]);
         List taf = [] ;
-        print('some');
-        print(f[i][0].length);
+        // print(f[i][1][0][3]);
+        // print(bahrso[f[i][0][0][3]]);
+        // print(WTaffelat[f[i][0][1][1]][f[i][0][1][2]]);
+        // print('after it');
+        // print(f[i]);
 
-        for(int j =0; j < f[i][0].length ; j++){
-          print(WTaffelat[f[i][0][j][1]][f[i][0][j][2]]);
-          print(WTaffelat[f[i][1][j][1]][f[i][1][j][2]]);
-          taf.add(WTaffelat[f[i][0][j][1]][f[i][0][j][2]]);
+        // print('some');
+        // print(f[i][0].length);
+
+        for(int j =0; j < f[i][0].length ; j++){// first shatr
+          // print(WTaffelat[f[i][0][j][1]][f[i][0][j][2]]);
+          // print(WTaffelat[f[i][1][j][1]][f[i][1][j][2]]);
+          taf.add(WTaffelat[f[i][0][j][1]][f[i][0][j][2]]);//add taffelat of first shatr
 
         }
-        for(int j =0; j < f[i][0].length ; j++){
-          print(WTaffelat[f[i][1][j][1]][f[i][1][j][2]]);
-          taf.add(WTaffelat[f[i][1][j][1]][f[i][1][j][2]]);
+        for(int j =0; j < f[i][0].length ; j++){//second shatr
+          // print(WTaffelat[f[i][1][j][1]][f[i][1][j][2]]);
+          taf.add(WTaffelat[f[i][1][j][1]][f[i][1][j][2]]);//add in second shatr
 
         }
 
-        print(taf);
-        print(bahrso[f[i][0][0][3]]);
-        taf.add(bahrso[f[i][0][0][3]]);
-        resulte.add(taf);
-        print(resulte);
+        // print(taf);
+        // print(bahrso[f[i][0][0][3]]);
+        taf.add(bahrso[f[i][0][0][3]]);//add bahr
+        resulte.add(taf);//add result list taf to result
+
         
       }
 
     }
-    print("before return");
-    print(resulte);
+    // print("before return");
+    // print(resulte);
     return resulte;
 
 

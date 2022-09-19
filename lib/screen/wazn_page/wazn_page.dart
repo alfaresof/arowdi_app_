@@ -97,7 +97,7 @@ alignment: Alignment.center,
                   onPressed: () {
                     if(_formKey.currentState!.validate()){
                       List<List> results;
-                      results = maino().mainos(first_shatr, second_shatr);
+                      results = main_search_class().main_search(first_shatr, second_shatr);
                       // print("this is results");
                       // print(results);
                       // print("=====================================${results.isNotEmpty}");

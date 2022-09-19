@@ -26,7 +26,7 @@ class result extends StatelessWidget {
     List<List> results;
     String A_A=search().converter_method(first, false),A_f=search().converter_method(first, true);
     String B_a=search().converter_method(second, false),B_f=search().converter_method(second, true);
-    results = maino().mainos(first, second);
+    results = main_search_class().main_search(first, second);
     return Scaffold(
       backgroundColor: black_color,
       body: SafeArea(
